@@ -1,0 +1,63 @@
+aviabiletlerin satish sistemi
+https://thumbs.dreamstime.com/b/two-airline-tickets-airplane-boarding-ticket-passenger-name-airlines-flight-invitation-airplanes-pass-vector-traveler-164126383.jpg
+
+[Country]
+Id
+Name
+
+
+[City]
+Id
+Name
+*Country
+
+[Gender]
+ Enum{Male,Female}
+
+[Passenger]
+Id
+Name
+Surname
+FatherName
+BirthOfDate
+*Gender
+
+[Flight]
+Id
+Name
+Plane(string)
+Date
+MaxPassengerCount
+
+[Ticket]
+Id
+No
+*FromCity   
+*ToCity
+*Passenger
+*Flight
+Seat
+Gate
+
+List<Country>
+List<City>
+List<Passenger>
+
+Flight flight = new Flight(..,..,20);
+Ticket ticket = flight.AddPassenger(passenger,cityFrom,cityTo,...);
+
+yoxlayiriq burda necəsə ki uçuş üçün ayrılan yerlər dolubmu??
+*AcademyTaski xatirlayaq
+
+
+Axirda sizde ticket list olacaq
+
+---------------------------------------------------------------------------------
+
+yığılan bütün "ticket"-ləri ekrana yazdırmaq
+sonra
+
+en sonda siyahidan ucush tarixi([Flight].Date) indiki tarixden kicik olanlari siyahıdan çıxarmaq lazımdır
+
+növbəti uçuşları ekrana yazdırmaq
+
